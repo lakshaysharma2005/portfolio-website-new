@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --void: #0d0d0d;
+  --surface: #141414;
+  --white: #fafafa;
+  --muted: #888888;
+  --border: rgba(255, 255, 255, 0.08);
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-void text-white antialiased;
+}
+
+::selection {
+  @apply bg-white/20 text-white;
+}
+
+.side-link {
+  @apply flex items-center py-3 pl-6 border-l-2 border-transparent text-muted text-sm transition-colors hover:text-white hover:border-white/30;
+}
+
+.side-link.active {
+  @apply text-white border-white/50;
+}
+
+.section-num {
+  @apply font-mono text-muted text-sm font-normal;
+}
+
+.project-card {
+  @apply relative p-6 rounded border border-border bg-surface/50 transition-all duration-300 hover:border-white/15;
+}
+
+.exp-item {
+  @apply relative pl-8 pb-12 border-l border-border border-b-0 last:pb-0;
+}
+
+.exp-item::before {
+  content: '';
+  @apply absolute left-0 top-0 w-1.5 h-1.5 -translate-x-[5px] rounded-full bg-white/50;
+}
