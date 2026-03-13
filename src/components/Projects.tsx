@@ -102,6 +102,28 @@ const projects: Project[] = [
     external: true,
     featured: true,
   },
+  {
+    title: 'Image Background Remover',
+    description:
+      'Node.js service integrating the Adobe Photoshop API (Firefly Services) to batch remove image backgrounds. Features a cutout endpoint (/process/cutout), batch processing, AWS S3 integration with pre-signed URLs, and job polling with retries. Optional resize and watermark support.',
+    tech: ['Node.js', 'TypeScript', 'Adobe Photoshop API', 'AWS S3'],
+    href: 'https://github.com/lakshaysharma2005/photoshop-api-batch-cutout',
+    codeHref: 'https://github.com/lakshaysharma2005/photoshop-api-batch-cutout',
+    demoHref: '#',
+    external: true,
+    featured: true,
+  },
+  {
+    title: 'Cryptography Final Project',
+    description:
+      'Final project for cryptography course—implementations and experiments in cryptographic concepts and protocols.',
+    tech: ['Cryptography', 'Security'],
+    href: 'https://github.com/lakshaysharma2005/cryptography-final-project',
+    codeHref: 'https://github.com/lakshaysharma2005/cryptography-final-project',
+    demoHref: '#',
+    external: true,
+    featured: true,
+  },
 ]
 
 export default function Projects() {
@@ -123,7 +145,7 @@ export default function Projects() {
         ))}
       </ul>
       <a
-        href="https://github.com"
+        href="https://github.com/lakshaysharma2005"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block mt-8 text-muted hover:text-white text-sm transition-colors"
