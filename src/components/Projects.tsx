@@ -21,6 +21,17 @@ const projects = [
     external: true,
     featured: true,
   },
+  {
+    title: 'Project Title',
+    description:
+      'Project description goes here. Replace with a short summary of what the project does and what you built.',
+    tech: ['Tech 1', 'Tech 2', 'Tech 3'],
+    href: '#',
+    codeHref: '#',
+    demoHref: '#',
+    external: true,
+    featured: true,
+  },
 ]
 
 export default function Projects() {
