@@ -11,8 +11,8 @@ const navLinks = [
 ]
 
 const socialLinks = [
-  { href: 'https://github.com', label: 'GitHub' },
-  { href: 'https://linkedin.com', label: 'LinkedIn' },
+  { href: 'https://github.com/lakshaysharma2005', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/lakshaysharma2005/', label: 'LinkedIn' },
   { href: 'https://twitter.com', label: 'Twitter' },
 ]
 

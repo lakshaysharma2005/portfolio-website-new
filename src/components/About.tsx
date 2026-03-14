@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section id="about" className="py-24">
@@ -73,9 +75,14 @@ export default function About() {
         <div className="relative max-w-xs mx-auto md:mx-0 group">
           <div className="absolute inset-0 border border-white/15 rounded-lg translate-x-4 translate-y-4 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
           <div className="relative rounded-lg bg-surface overflow-hidden aspect-square border border-border">
-            <div className="w-full h-full flex items-center justify-center text-muted/50 text-4xl">
-              LS
-            </div>
+            <Image
+              src="/lakshay-headshot.png"
+              alt="Lakshay"
+              width={384}
+              height={384}
+              className="w-full h-full object-cover object-top scale-125"
+              priority
+            />
           </div>
         </div>
       </div>
