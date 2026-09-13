@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Lakshay Sharma">
+  <rect width="32" height="32" rx="8" fill="#0a0b0d"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="none" stroke="#eceff3" stroke-opacity="0.12"/>
+  <text
+    x="16.5"
+    y="23"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-size="20"
+    font-weight="600"
+    fill="#eceff3"
+  >L</text>
+</svg>

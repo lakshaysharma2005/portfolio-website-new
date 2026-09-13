@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Header from '@/components/Header'
+import UnregisterSW from '@/components/UnregisterSW'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -14,7 +15,14 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: 'Lakshay Sharma',
-  description: 'CS student at UMD. Full-stack products, internal tools, and AI workflows.',
+  description: 'CS senior at UMD. Full-stack products, internal tools, and AI workflows.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-icon', sizes: '180x180', type: 'image/png' }],
+  },
 }
 
 export default function RootLayout({
@@ -25,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${GeistSans.variable} ${lora.variable}`}>
       <body className={`${GeistSans.className} min-h-screen bg-page text-fg antialiased`}>
+        {process.env.NODE_ENV === 'development' ? <UnregisterSW /> : null}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-fg focus:text-page focus:rounded text-sm"
