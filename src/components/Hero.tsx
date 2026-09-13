@@ -55,7 +55,8 @@ export default function Hero() {
           View My Work
         </a>
         <a
-          href="#"
+          href="/Lakshay_Sharma_Resume.pdf"
+          download="Lakshay_Sharma_Resume.pdf"
           className="inline-block px-6 py-3 border border-white/25 text-white rounded text-sm hover:bg-white/5 transition-colors"
         >
           Download Resume
