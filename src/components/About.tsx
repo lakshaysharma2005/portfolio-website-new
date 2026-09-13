@@ -77,7 +77,7 @@ export default function About() {
           <div className="relative rounded-lg bg-surface overflow-hidden aspect-square border border-border">
             <Image
               src="/lakshay-headshot.png"
-              alt="Lakshay"
+              alt="Lakshay Sharma"
               width={384}
               height={384}
               className="w-full h-full object-cover object-top scale-125"
