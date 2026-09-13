@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,15 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        void: '#0d0d0d',
-        surface: '#141414',
-        white: '#fafafa',
-        muted: '#888888',
-        border: 'rgba(255, 255, 255, 0.08)',
+        page: 'var(--page)',
+        fg: 'var(--fg)',
+        muted: 'var(--muted)',
+        surface: 'var(--surface)',
+        border: 'var(--border)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
     },
   },

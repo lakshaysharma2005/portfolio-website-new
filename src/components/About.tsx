@@ -1,91 +1,32 @@
 import Image from 'next/image'
+import { education, skills } from '@/data/site'
 
 export default function About() {
   return (
-    <section id="about" className="py-24">
-      <h2 className="flex items-center gap-4 text-2xl font-bold text-white mb-12 tracking-tight">
-        <span className="section-num">01.</span>
-        About Me
-      </h2>
-      <div className="grid md:grid-cols-[3fr_1fr] gap-12 items-start">
-        <div className="space-y-6 text-muted leading-relaxed">
-          <p>
-            I&apos;m a passionate software engineer with 3+ years of experience building modern web applications. I love turning complex problems into simple, beautiful, and intuitive solutions.
-          </p>
-          <p>
-            My journey in software development started with curiosity about how things work behind the scenes. Today, I specialize in full-stack development with a focus on creating exceptional user experiences.
-          </p>
-          <p>
-            When I&apos;m not coding, you can find me contributing to open-source projects, exploring new technologies, or sharing knowledge with the developer community.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-            <div>
-              <h4 className="text-white/90 font-semibold text-sm mb-1">Clean Code</h4>
-              <p className="text-muted text-sm">I write maintainable, scalable code following best practices and design patterns.</p>
+    <>
+      <section className="w-full">
+        <h2 className="text-[13px] text-muted mb-4">skills</h2>
+        <dl className="space-y-2 text-[13px]">
+          {Object.entries(skills).map(([k, v]) => (
+            <div key={k} className="flex gap-2">
+              <dt className="text-fg shrink-0">{k}</dt>
+              <dd className="text-muted">· {v}</dd>
             </div>
-            <div>
-              <h4 className="text-white/90 font-semibold text-sm mb-1">Problem Solver</h4>
-              <p className="text-muted text-sm">I enjoy tackling complex challenges and finding innovative solutions to real-world problems.</p>
-            </div>
-            <div>
-              <h4 className="text-white/90 font-semibold text-sm mb-1">Team Player</h4>
-              <p className="text-muted text-sm">Experienced in collaborative development environments and agile methodologies.</p>
-            </div>
-            <div>
-              <h4 className="text-white/90 font-semibold text-sm mb-1">Fast Learner</h4>
-              <p className="text-muted text-sm">Quick to adapt to new technologies and frameworks as the industry evolves.</p>
-            </div>
-          </div>
-
-          <p className="pt-4">Here are the technologies I work with:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-            <div>
-              <h4 className="text-white/90 font-semibold mb-2">Frontend</h4>
-              <ul className="space-y-1 text-white/80">
-                {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js', 'JavaScript'].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <span className="text-muted">▹</span> {t}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white/90 font-semibold mb-2">Backend</h4>
-              <ul className="space-y-1 text-white/80">
-                {['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis', 'GraphQL'].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <span className="text-muted">▹</span> {t}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white/90 font-semibold mb-2">Tools & Others</h4>
-              <ul className="space-y-1 text-white/80">
-                {['Git', 'Docker', 'AWS', 'Firebase', 'Jest', 'Cypress'].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <span className="text-muted">▹</span> {t}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          ))}
+        </dl>
+      </section>
+      <section className="w-full">
+        <h2 className="text-[13px] text-muted mb-4">education</h2>
+        <div className="flex gap-3">
+          <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded bg-surface">
+            <Image src={education.logo} alt="" fill sizes="20px" className="object-cover" />
+          </span>
+          <div>
+            <p className="text-[14px] text-fg leading-5">{education.school}</p>
+            <p className="text-[13px] text-muted mt-1">{education.detail}</p>
           </div>
         </div>
-        <div className="relative max-w-xs mx-auto md:mx-0 group">
-          <div className="absolute inset-0 border border-white/15 rounded-lg translate-x-4 translate-y-4 group-hover:translate-x-5 group-hover:translate-y-5 transition-transform" />
-          <div className="relative rounded-lg bg-surface overflow-hidden aspect-square border border-border">
-            <Image
-              src="/lakshay-headshot.png"
-              alt="Lakshay Sharma"
-              width={384}
-              height={384}
-              className="w-full h-full object-cover object-top scale-125"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

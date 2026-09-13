@@ -1,17 +1,20 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lora } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import Sidebar from '@/components/Sidebar'
+import Header from '@/components/Header'
 
-const inter = Inter({
+const lora = Lora({
   subsets: ['latin'],
-  variable: '--font-sans',
+  style: ['italic', 'normal'],
+  variable: '--font-serif',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Lakshay Sharma | Full-Stack Developer',
-  description: 'Full-Stack Developer passionate about creating innovative solutions and building exceptional user experiences.',
+  title: 'Lakshay Sharma',
+  description: 'CS student at UMD. Full-stack products, internal tools, and AI workflows.',
 }
 
 export default function RootLayout({
@@ -20,18 +23,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen font-sans bg-void text-white">
+    <html lang="en" className={`dark ${GeistSans.variable} ${lora.variable}`}>
+      <body className={`${GeistSans.className} min-h-screen bg-page text-fg antialiased`}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-void focus:rounded font-medium"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-fg focus:text-page focus:rounded text-sm"
         >
           Skip to content
         </a>
-        <Sidebar />
-        <main id="main-content" className="ml-0 md:ml-[min(180px,20vw)] px-6 md:px-12 py-24 md:py-20 pt-28 md:pt-20 max-w-4xl">
-          {children}
-        </main>
+        <div className="mx-auto w-full max-w-[40rem] px-6">
+          <Header />
+          <main id="main-content">{children}</main>
+        </div>
+        <Analytics />
       </body>
     </html>
   )

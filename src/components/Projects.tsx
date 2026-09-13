@@ -1,116 +1,48 @@
-const projects = [
-  {
-    title: 'Sable Finance',
-    description:
-      'Personal-finance tracker built on the Plaid API with a unified view of bank accounts, cards, crypto, and investments. Categorized 500+ transactions with Plaid Enrich, added an MCP server for AI insights, and secured bank tokens with AES-256-GCM encryption.',
-    tech: ['Plaid API', 'Plaid Enrich', 'MCP', 'AES-256-GCM'],
-    href: '#',
-    codeHref: '#',
-    demoHref: '#',
-    external: true,
-    featured: true,
-  },
-  {
-    title: 'Xficient Bot',
-    description:
-      '🥇 First place winner at Bitcamp 2024! Revolutionary university course catalog management using unsupervised learning to cluster uploaded files. Seamlessly integrates OpenAI API through LangChain for intuitive course information access.',
-    tech: ['Python', 'OpenAI API', 'LangChain', 'Machine Learning'],
-    href: '#',
-    codeHref: '#',
-    demoHref: '#',
-    external: true,
-    featured: true,
-  },
-  {
-    title: 'Claim Assist',
-    description:
-      'Wildfire Insurance Claims Management Platform. Engineered a scalable full-stack web application to modernize wildfire insurance claims processing, leveraging React, TypeScript, and Tailwind CSS for a dynamic and responsive UI. Architected a secure backend with Supabase, enabling user authentication, encrypted file storage, and real-time data handling.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Netlify'],
-    href: '#',
-    codeHref: '#',
-    demoHref: '#',
-    external: true,
-    featured: true,
-  },
-]
+import Image from 'next/image'
+import { projects, site } from '@/data/site'
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24">
-      <h2 className="flex items-center gap-4 text-2xl font-bold text-white mb-4 tracking-tight">
-        <span className="section-num">03.</span>
-        Featured Projects
-      </h2>
-      <p className="text-muted text-sm mb-12 max-w-xl">
-        A collection of projects that showcase my skills and passion for development.
-      </p>
-      <ul className="grid gap-6">
-        {projects.map((project) => (
-          <li key={project.title}>
-            <article className="project-card block group">
-              <div className="flex justify-between items-start gap-4 mb-3">
-                <div className="flex items-center gap-2">
-                  {project.featured && (
-                    <span className="text-xs font-medium text-white/60 uppercase tracking-wider">Featured</span>
-                  )}
-                  <h3 className="text-xl font-semibold text-white transition-colors">
-                    <a
-                      href={project.href}
-                      target={project.external ? '_blank' : undefined}
-                      rel={project.external ? 'noopener noreferrer' : undefined}
-                      className="hover:text-white"
-                    >
-                      {project.title}
-                    </a>
-                  </h3>
+    <section id="projects" className="w-full">
+      <h2 className="text-[13px] text-muted mb-4">stuff i&apos;ve built</h2>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {projects.map((project) => {
+          const href = `${site.github}/${project.repo}`
+          const og = `https://opengraph.githubassets.com/1/${site.githubUser}/${project.repo}`
+          return (
+            <li key={project.repo}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <div className="rounded-lg overflow-hidden border border-border bg-surface">
+                  <Image
+                    src={og}
+                    alt={`${project.title} repository preview`}
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto block"
+                  />
                 </div>
-                <a
-                  href={project.href}
-                  target={project.external ? '_blank' : undefined}
-                  rel={project.external ? 'noopener noreferrer' : undefined}
-                  className="text-muted text-2xl hover:text-white transition-colors"
-                  aria-hidden
-                >
-                  ↗
-                </a>
-              </div>
-              <p className="text-muted text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
-              <ul className="flex flex-wrap gap-4 text-xs text-muted mb-4">
-                {project.tech.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-              <div className="flex gap-4 text-xs">
-                <a
-                  href={project.codeHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  Code
-                </a>
-                <a
-                  href={project.demoHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  Demo
-                </a>
-              </div>
-            </article>
-          </li>
-        ))}
+                <p className="mt-2 text-[13px] text-fg">
+                  <span className="text-muted">{site.githubUser}/</span>
+                  {project.title}
+                </p>
+                <p className="text-[13px] text-muted leading-5 mt-0.5">{project.blurb}</p>
+              </a>
+            </li>
+          )
+        })}
       </ul>
       <a
-        href="https://github.com"
+        href={site.github}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-8 text-muted hover:text-white text-sm transition-colors"
+        className="inline-block mt-4 text-[13px] text-muted hover:text-fg"
       >
-        View All Projects on GitHub →
+        view all projects →
       </a>
     </section>
   )

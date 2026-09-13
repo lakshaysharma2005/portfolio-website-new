@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --void: #0d0d0d;
-  --surface: #141414;
-  --white: #fafafa;
-  --muted: #888888;
+:root,
+html.dark {
+  --page: #0a0b0d;
+  --fg: #eceff3;
+  --muted: #8b929c;
+  --surface: #12141a;
   --border: rgba(255, 255, 255, 0.08);
-  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+}
+
+html.light {
+  --page: #fcfcfc;
+  --fg: #17181c;
+  --muted: #5c636e;
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -16,65 +24,21 @@ html {
 }
 
 body {
-  @apply bg-void text-white antialiased;
+  @apply bg-page text-fg antialiased;
 }
 
 ::selection {
-  @apply bg-white/20 text-white;
+  background: rgba(139, 146, 156, 0.35);
 }
 
-.side-link {
-  @apply flex items-center py-3 pl-6 border-l-2 border-transparent text-muted text-sm transition-colors hover:text-white hover:border-white/30;
-}
-
-.side-link.active {
-  @apply text-white border-white/50;
-}
-
-.section-num {
-  @apply font-mono text-muted text-sm font-normal;
-}
-
-.project-card {
-  @apply relative p-6 rounded border border-border bg-surface/50 transition-all duration-300 hover:border-white/15;
-}
-
-.exp-item {
-  @apply relative pl-8 pb-6 border-l border-border border-b-0 last:pb-0;
-}
-
-.exp-item[open] {
-  @apply pb-10 last:pb-0;
-}
-
-.exp-item::before {
-  content: '';
-  @apply absolute left-0 top-0 w-1.5 h-1.5 -translate-x-[5px] rounded-full bg-white/50;
-}
-
-.exp-summary {
-  @apply list-none cursor-pointer rounded-sm outline-none transition-colors;
-  @apply focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-white/30;
-}
-
-.exp-summary::-webkit-details-marker {
-  display: none;
-}
-
-.exp-summary::marker {
-  content: '';
-  font-size: 0;
-}
-
-.exp-summary:hover h3,
-.exp-summary:hover .exp-chevron {
-  @apply text-white;
-}
-
-.exp-chevron {
-  @apply shrink-0 transition-transform duration-200;
-}
-
-.exp-item[open] .exp-chevron {
-  @apply rotate-180;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
