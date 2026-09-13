@@ -1,8 +1,8 @@
 const projects = [
   {
-    title: 'Sable Finance | Plaid API',
+    title: 'Sable Finance',
     description:
-      'Personal-finance tracking app built on the Plaid API that gives users a unified view of bank accounts, credit cards, prediction markets, cryptocurrency, and investment portfolios. Categorized 500+ transactions with Plaid Enrich to standardize merchant names and improve spending insights. Added an MCP server so the app can connect to AI models for querying financial data and receiving personalized insights, and secured bank access tokens and user data with AES-256-GCM encryption and signed HTTP-only sessions.',
+      'Personal-finance tracker built on the Plaid API with a unified view of bank accounts, cards, crypto, and investments. Categorized 500+ transactions with Plaid Enrich, added an MCP server for AI insights, and secured bank tokens with AES-256-GCM encryption.',
     tech: ['Plaid API', 'Plaid Enrich', 'MCP', 'AES-256-GCM'],
     href: '#',
     codeHref: '#',
