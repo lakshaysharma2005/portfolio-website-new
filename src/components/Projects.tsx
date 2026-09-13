@@ -1,5 +1,16 @@
 const projects = [
   {
+    title: 'Sable Finance | Plaid API',
+    description:
+      'Personal-finance tracking app built on the Plaid API that gives users a unified view of bank accounts, credit cards, prediction markets, cryptocurrency, and investment portfolios. Categorized 500+ transactions with Plaid Enrich to standardize merchant names and improve spending insights. Added an MCP server so the app can connect to AI models for querying financial data and receiving personalized insights, and secured bank access tokens and user data with AES-256-GCM encryption and signed HTTP-only sessions.',
+    tech: ['Plaid API', 'Plaid Enrich', 'MCP', 'AES-256-GCM'],
+    href: '#',
+    codeHref: '#',
+    demoHref: '#',
+    external: true,
+    featured: true,
+  },
+  {
     title: 'Xficient Bot',
     description:
       '🥇 First place winner at Bitcamp 2024! Revolutionary university course catalog management using unsupervised learning to cluster uploaded files. Seamlessly integrates OpenAI API through LangChain for intuitive course information access.',
