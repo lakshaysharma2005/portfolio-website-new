@@ -14,7 +14,7 @@ export default function Header() {
         <a href="#projects" className="hover:text-fg transition-colors">
           projects
         </a>
-        <a href={site.resume} className="hover:text-fg transition-colors" download>
+        <a href={site.resume} className="hover:text-fg transition-colors">
           resume
         </a>
         <ThemeToggle />
