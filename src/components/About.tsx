@@ -6,11 +6,10 @@ export default function About() {
     <>
       <section className="w-full">
         <h2 className="text-[13px] text-muted mb-4">skills</h2>
-        <dl className="space-y-2 text-[13px]">
+        <dl className="space-y-1.5 text-[14px] leading-6 text-fg">
           {Object.entries(skills).map(([k, v]) => (
-            <div key={k} className="flex gap-2">
-              <dt className="text-fg shrink-0">{k}</dt>
-              <dd className="text-muted">· {v}</dd>
+            <div key={k}>
+              <dt className="inline font-semibold">{k}:</dt> <dd className="inline">{v}</dd>
             </div>
           ))}
         </dl>

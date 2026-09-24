@@ -17,6 +17,14 @@ export default function Hero() {
           github
         </a>
         <a
+          href={site.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted hover:text-fg underline-offset-4 hover:underline"
+        >
+          linkedin
+        </a>
+        <a
           href={`mailto:${site.email}`}
           className="text-muted hover:text-fg underline-offset-4 hover:underline"
         >

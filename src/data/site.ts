@@ -3,6 +3,7 @@ export const site = {
   email: 'lsharma3@umd.edu',
   github: 'https://github.com/lakshaysharma2005',
   githubUser: 'lakshaysharma2005',
+  linkedin: 'https://www.linkedin.com/in/lakshaysharma2005/',
   resume: '/Lakshay_Sharma_Resume.pdf',
   bio: 'cs senior at umd. founding engineer at dreach (yc). i build full-stack products, internal tools, and ai workflows. less talk, more shipped work.',
 }
@@ -98,10 +99,11 @@ export const experience = [
 ]
 
 export const skills = {
-  Languages: 'Java, Python, OCaml, JavaScript, TypeScript, React',
-  Frameworks: 'Next.js, React, Node.js, Flask, Django, Tailwind',
-  'AI & Data': 'LangChain, OpenAI APIs, scikit-learn, n8n',
-  Infra: 'Git, Docker, AWS, PostgreSQL, MongoDB',
+  Languages: 'Java, Python, C, C++, Rust, SQL, JavaScript, HTML/CSS, TypeScript, Swift',
+  'Libraries/Frameworks':
+    'TensorFlow, scikit-learn, pandas, Numpy, FastAPI, React, Next.js, Flask',
+  'Tools/Platforms':
+    'Git, GitHub Actions, Docker, AWS, PostgreSQL, Claude Code, Supabase, Grafana',
 }
 
 export const education = {
