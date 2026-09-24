@@ -5,7 +5,7 @@ export const site = {
   githubUser: 'lakshaysharma2005',
   linkedin: 'https://www.linkedin.com/in/lakshaysharma2005/',
   resume: '/Lakshay_Sharma_Resume.pdf',
-  bio: 'cs senior at umd. founding engineer at dreach (yc). i build full-stack products, internal tools, and ai workflows. less talk, more shipped work.',
+  bio: 'cs senior at umd. gtm engineering intern at dreach (yc). i build full-stack products, internal tools, and ai workflows. less talk, more shipped work.',
 }
 
 export const projects = [
@@ -44,10 +44,10 @@ export const projects = [
 export const experience = [
   {
     company: 'Dreach (YC P26)',
-    role: 'Founding Engineer',
-    period: 'Aug 2026 – Current',
-    line: 'Building the product from the ground up.',
-    tech: [] as string[],
+    role: 'GTM Engineering Intern',
+    period: 'Sep 2026 – Current',
+    line: 'AI platform that books sales conversations, with LinkedIn automation supporting 15+ calls a week.',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL'],
     logo: '/logos/dreach.png',
     fit: 'cover' as const,
   },
@@ -55,16 +55,16 @@ export const experience = [
     company: 'Resensys',
     role: 'Software Engineering Intern',
     period: 'May 2026 – Aug 2026',
-    line: 'Automated report generation from bridge sensor data, plus a production security audit and server migration.',
-    tech: ['Python', 'Django', 'DynamoDB'],
+    line: 'Automated bridge-sensor reports from 5 hours to 10 minutes, and a FastAPI app for sensors on 80+ bridges.',
+    tech: ['Python', 'FastAPI', 'AWS'],
     logo: '/logos/resensys.png',
     fit: 'round' as const,
   },
   {
     company: 'AutoZenix AI',
-    role: 'Co-Founder & Lead Engineer',
-    period: 'July 2025 – Current',
-    line: 'AI automation agency. Voice agents and CRM workflows for clients in the US, Canada, and UAE.',
+    role: 'Co-Founder',
+    period: 'Sep 2025 – Mar 2026',
+    line: 'AI automation agency. $16k+ in revenue, voice agents, and CRM workflows for clients in the US, Canada, and UAE.',
     tech: ['n8n', 'Claude Code'],
     logo: 'autozenix',
     fit: 'cover' as const,
@@ -81,7 +81,7 @@ export const experience = [
   {
     company: 'Terrapin Works',
     role: 'Software Engineer',
-    period: 'Aug 2024 – May 2025',
+    period: 'Aug 2024 – Current',
     line: 'Led an 8-person team on Pinpoint, the makerspace booking and request platform.',
     tech: ['Flask', 'React', 'SQL'],
     logo: '/logos/terrapin-works.png',
@@ -108,6 +108,6 @@ export const skills = {
 
 export const education = {
   school: 'University of Maryland',
-  detail: 'B.S. Computer Science',
+  detail: 'B.S. Computer Science and Mathematics · Dec 2026',
   logo: '/logos/umd.png',
 }
