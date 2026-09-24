@@ -8,7 +8,6 @@ export default function Projects() {
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {projects.map((project) => {
           const href = `${site.github}/${project.repo}`
-          const og = `https://opengraph.githubassets.com/1/${site.githubUser}/${project.repo}`
           return (
             <li key={project.repo}>
               <a
@@ -19,10 +18,11 @@ export default function Projects() {
               >
                 <div className="rounded-lg overflow-hidden border border-border bg-surface">
                   <Image
-                    src={og}
+                    src={`/projects/${project.repo}.webp`}
                     alt={`${project.title} repository preview`}
                     width={1200}
                     height={600}
+                    sizes="(min-width: 640px) 290px, calc(100vw - 3rem)"
                     className="w-full h-auto block"
                   />
                 </div>
