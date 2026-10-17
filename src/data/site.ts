@@ -12,7 +12,7 @@ export const projects = [
   {
     repo: 'sable-finance',
     title: 'sable-finance',
-    blurb: 'personal finance tracker — plaid, accounts, and ai insights.',
+    blurb: 'personal finance tracker — bank, card, brokerage, and crypto via plaid, plus an mcp server for llm queries.',
   },
   {
     repo: 'claim-assist',
@@ -46,8 +46,8 @@ export const experience = [
     company: 'Dreach (YC P26)',
     role: 'GTM Engineering Intern',
     period: 'Sep 2026 – Current',
-    line: 'AI platform that books sales conversations, with LinkedIn automation supporting 15+ calls a week.',
-    tech: ['Next.js', 'TypeScript', 'PostgreSQL'],
+    line: 'LinkedIn outreach bot that booked 15+ sales calls and raised reply rate from 8% to 14%.',
+    tech: ['TypeScript', 'Puppeteer', 'PostgreSQL'],
     logo: '/logos/dreach.png',
     fit: 'cover' as const,
   },
@@ -55,8 +55,8 @@ export const experience = [
     company: 'Resensys',
     role: 'Software Engineering Intern',
     period: 'May 2026 – Aug 2026',
-    line: 'Automated bridge-sensor reports from 5 hours to 10 minutes, and a FastAPI app for sensors on 80+ bridges.',
-    tech: ['Python', 'FastAPI', 'AWS'],
+    line: 'Automated bridge-sensor reports from 5 hours to 10 minutes, and a NiceGUI app for 80+ bridges.',
+    tech: ['Python', 'NiceGUI', 'AWS'],
     logo: '/logos/resensys.png',
     fit: 'round' as const,
   },
@@ -64,8 +64,8 @@ export const experience = [
     company: 'AutoZenix AI',
     role: 'Co-Founder',
     period: 'Sep 2025 – Mar 2026',
-    line: 'AI automation agency. $16k+ in revenue, voice agents, and CRM workflows for clients in the US, Canada, and UAE.',
-    tech: ['n8n', 'Claude Code'],
+    line: 'AI voice agents and CRM automations. $16k+ from 12 clients, and a 43% lift in lead conversion.',
+    tech: ['n8n', 'Vapi'],
     logo: 'autozenix',
     fit: 'cover' as const,
   },
@@ -73,7 +73,7 @@ export const experience = [
     company: 'JK Tyre & Industries Ltd.',
     role: 'Software Engineering Intern',
     period: 'June 2025 – Aug 2025',
-    line: 'Route optimization that cut dealer-network planning from 4 hours to 45 minutes.',
+    line: 'Route optimizer that cut dealer trip planning from ~2 hours to ~30 minutes.',
     tech: ['Python', 'NetworkX', 'MySQL'],
     logo: '/logos/jk-tyre.png',
     fit: 'cover' as const,
@@ -82,8 +82,8 @@ export const experience = [
     company: 'Terrapin Works',
     role: 'Software Engineer',
     period: 'Aug 2024 – Current',
-    line: 'Led an 8-person team on Pinpoint, the makerspace booking and request platform.',
-    tech: ['Flask', 'React', 'SQL'],
+    line: 'Led an 8-person team on Pinpoint, used by 25+ makerspaces across campus.',
+    tech: ['Flask', 'React', 'MySQL'],
     logo: '/logos/terrapin-works.png',
     fit: 'cover' as const,
   },
@@ -99,15 +99,17 @@ export const experience = [
 ]
 
 export const skills = {
-  Languages: 'Java, Python, C, C++, Rust, SQL, JavaScript, HTML/CSS, TypeScript, Swift',
+  Languages: 'Java, Python, TypeScript, C, C++, Rust, SQL, JavaScript, HTML/CSS',
   'Libraries/Frameworks':
-    'TensorFlow, scikit-learn, pandas, Numpy, FastAPI, React, Next.js, Flask',
+    'FastAPI, Next.js, React, Puppeteer, docxtpl, NiceGUI, NetworkX, Flask, PyTorch, pandas, pytest',
   'Tools/Platforms':
-    'Git, GitHub Actions, Docker, AWS, PostgreSQL, Claude Code, Supabase, Grafana',
+    'Git, GitLab CI/CD, Docker, AWS (EC2, Lambda, S3), PostgreSQL, MySQL, Google Maps API, Plaid API',
 }
 
 export const education = {
   school: 'University of Maryland',
   detail: 'B.S. Computer Science and Mathematics · Dec 2026',
+  coursework:
+    'Machine Learning, Artificial Intelligence, GenAI Software Development, Computer Systems, Parallel Computing, Compilers, Database Design, Computational Methods, Data Science, Discrete Math',
   logo: '/logos/umd.png',
 }

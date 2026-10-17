@@ -23,6 +23,7 @@ export default function About() {
           <div>
             <p className="text-[14px] text-fg leading-5">{education.school}</p>
             <p className="text-[13px] text-muted mt-1">{education.detail}</p>
+            <p className="text-[13px] text-muted mt-1 leading-6">{education.coursework}</p>
           </div>
         </div>
       </section>
